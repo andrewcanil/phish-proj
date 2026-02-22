@@ -1,40 +1,75 @@
-🛠️ Tech Stack
-Language: Python 3.x
+# 🛠️ Tech Stack
 
-Frontend Framework: Streamlit
+- **Language:** Python 3.x  
+- **Frontend Framework:** Streamlit  
+- **Data Processing:** Pandas, Regex (`re`), Python `email` library  
+- **External API:** ip-api (for IP Geolocation)  
 
-Data Processing: Pandas, Regex (re), Python email library
+---
 
-External API: ip-api (for IP Geolocation)
+# 🚀 Run Locally
 
-🚀 Run Locally
-1. Clone the repository
-2. Install dependencies
-Make sure you have Python installed. Then, install the required libraries:
+## 1️⃣ Clone the Repository
 
-3. Start the application
-The application will open automatically in your default web browser at http://localhost:8501.
+```bash
+git clone <your-repository-url>
+cd <your-project-folder>
+```
 
-📖 How to Use
-Open any suspicious email in your inbox (e.g., Gmail).
+## 2️⃣ Install Dependencies
 
-Click the three-dot menu and select "Show original" or "View raw message".
+Make sure you have **Python 3.x** installed. Then install the required libraries:
 
-Copy the entire block of raw text.
+```bash
+pip install -r requirements.txt
+```
 
-Paste the text into the Phish-Catch input box and click "Analyze Header".
+*(If requirements.txt is not available, manually install: streamlit, pandas, requests, etc.)*
 
-Review the authentication scorecard and the interactive map to determine the email's legitimacy.
+## 3️⃣ Start the Application
 
-🔮 Future Enhancements
-Machine Learning Integration: Train a model to classify phishing probability based on specific header anomalies.
+```bash
+streamlit run app.py
+```
 
-Domain Reputation Check: Integrate the VirusTotal API to automatically flag known malicious IP addresses.
+The application will open automatically in your default web browser at:
 
-Export to PDF: Allow users to download a formal forensic report of the analyzed email.
+```
+http://localhost:8501
+```
 
-⚠️ Disclaimer
-This tool relies on public IP routing. Internal network hops (e.g., 10.x.x.x, 192.168.x.x) are intentionally filtered out as they cannot be geographically mapped.
+---
 
-📜 License
-Distributed under the MIT License.
+# 📖 How to Use
+
+1. Open any suspicious email in your inbox (e.g., Gmail).  
+2. Click the **three-dot menu** and select **"Show original"** or **"View raw message"**.  
+3. Copy the entire block of raw text.  
+4. Paste the text into the **Phish-Catch** input box.  
+5. Click **"Analyze Header"**.  
+6. Review the **authentication scorecard** and the **interactive map** to determine the email's legitimacy.
+
+---
+
+# 🔮 Future Enhancements
+
+- 🤖 **Machine Learning Integration**  
+  Train a model to classify phishing probability based on specific header anomalies.
+
+- 🌐 **Domain Reputation Check**  
+  Integrate the VirusTotal API to automatically flag known malicious IP addresses.
+
+- 📄 **Export to PDF**  
+  Allow users to download a formal forensic report of the analyzed email.
+
+---
+
+# ⚠️ Disclaimer
+
+This tool relies on public IP routing. Internal network hops (e.g., `10.x.x.x`, `192.168.x.x`) are intentionally filtered out as they cannot be geographically mapped.
+
+---
+
+# 📜 License
+
+Distributed under the **MIT License**.
